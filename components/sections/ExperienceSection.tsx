@@ -91,6 +91,7 @@ export default function ExperienceSection() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      id="experience"
       className="space-y-12 my-12">
       {/* Section Title */}
       <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8">

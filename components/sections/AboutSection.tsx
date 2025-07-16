@@ -94,6 +94,7 @@ export default function AboutSection() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      id="about"
       className="space-y-12 my-12">
       {/* Section Title */}
       <motion.h2 variants={itemVariants} className="text-3xl font-bold mb-8">
