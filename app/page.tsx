@@ -42,12 +42,12 @@ export default function Home() {
         setActiveTab={setActiveTab}
       />
 
-      <div className="flex justify-center min-h-screen pt-24">
-        <div className="flex max-w-7xl w-full">
-          <div className="w-1/4 pr-20">
+      <div className="flex justify-center min-h-screen pt-24 px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row max-w-7xl w-full">
+          {/* Sidebar center on mobile, left on desktop */}
+          <div className="w-full flex justify-center md:block md:w-1/4 md:pr-20 mb-8 md:mb-0">
             <Sidebar />
           </div>
-
           <main className="flex-1 relative z-10">
             <AnimatePresence mode="wait">
               <motion.div
