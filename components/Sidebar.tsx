@@ -54,7 +54,7 @@ export default function Sidebar() {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-24 h-fit z-40">
+      className="h-fit z-40">
       <div className="bg-transparent backdrop-blur-sm rounded-2xl p-6">
         <div className="flex flex-col items-center space-y-6">
           {/* Profile Image */}
