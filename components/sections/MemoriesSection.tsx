@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import GradientText from "@/components/ui/gradient-text";
 import { FocusCards } from "@/components/ui/focus-cards";
-import { DraggableCards } from "@/components/ui/draggable-cards";
+import { DraggableCardContainer, DraggableCardBody } from "@/components/ui/draggable-card";
 import { FaCamera, FaPenFancy } from "react-icons/fa";
 
 export default function MemoriesSection() {
@@ -23,30 +23,41 @@ export default function MemoriesSection() {
     },
   ];
 
-  const draggablePhotos = [
+  const memoryCards = [
     {
-      id: "1",
       title: "First React Project",
-      src: "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "My journey into React development started here",
+      image: "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-10 left-[20%] rotate-[-5deg]",
     },
     {
-      id: "2",
       title: "University Days",
-      src: "https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Memorable moments from university life",
+      image: "https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-40 left-[25%] rotate-[-7deg]",
     },
     {
-      id: "3",
       title: "Hackathon Victory",
-      src: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Winning my first hackathon competition",
+      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-5 left-[40%] rotate-[8deg]",
     },
     {
-      id: "4",
       title: "Code Review Session",
-      src: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Learning from senior developers",
+      image: "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-32 left-[55%] rotate-[10deg]",
+    },
+    {
+      title: "Team Collaboration",
+      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-20 right-[35%] rotate-[2deg]",
+    },
+    {
+      title: "Learning Journey",
+      image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-24 left-[45%] rotate-[-7deg]",
+    },
+    {
+      title: "Coding Sessions",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400",
+      className: "absolute top-8 left-[30%] rotate-[4deg]",
     },
   ];
 
@@ -129,9 +140,25 @@ export default function MemoriesSection() {
         </div>
 
         {/* Draggable Cards */}
-        <div className="mb-12">
-          <h4 className="text-lg font-medium text-gray-300 mb-6">Memory Collection (Drag to Reorder)</h4>
-          <DraggableCards cards={draggablePhotos} />
+        <div className="mb-12 relative">
+          <h4 className="text-lg font-medium text-gray-300 mb-6">Interactive Memory Cards (Drag & Tilt)</h4>
+          <DraggableCardContainer className="relative flex min-h-[600px] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10">
+            <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-xl font-bold text-gray-400 md:text-2xl z-0">
+              Drag the cards around and watch them tilt!
+            </p>
+            {memoryCards.map((item, index) => (
+              <DraggableCardBody key={index} className={item.className}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="pointer-events-none relative z-10 h-48 w-48 md:h-64 md:w-64 object-cover rounded-xl"
+                />
+                <h3 className="mt-3 text-center text-sm md:text-lg font-semibold text-white">
+                  {item.title}
+                </h3>
+              </DraggableCardBody>
+            ))}
+          </DraggableCardContainer>
         </div>
       </motion.div>
 
