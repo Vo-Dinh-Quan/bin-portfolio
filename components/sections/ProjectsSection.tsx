@@ -7,11 +7,11 @@ import GradientText from "@/components/ui/gradient-text";
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "ScoreMe.io",
+      title: "Kicks Shoes",
       description:
-        "AI-powered product scoring tool: evaluate, share, compare — no spreadsheets.",
+        "👟Kicks is a sleek and modern e-commerce website designed for showcasing and selling shoes. The site offers a user-friendly experience with categorized collections, customer reviews, and special promotions to keep visitors engaged.",
       technologies: ["React", "Firebase", "OpenAI", "Netlify"],
-      link: "#",
+      link: "https://github.com/Vo-Dinh-Quan/Kicks-Shoes",
       image:
         "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
     },

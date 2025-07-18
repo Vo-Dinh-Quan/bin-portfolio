@@ -38,11 +38,15 @@ import { AiOutlineAntDesign } from "react-icons/ai";
 
 export default function AboutSection() {
   const skills = [
-    "Familiar with software development processes (SDLC)",
-    "Teamwork and collaboration",
-    "Willingness to learn and adapt",
-    "Problem-solving and logical thinking",
+    "Skilled in software development processes with Agile expertise",
+    "Strong teamwork and collaboration in diverse environments",
+    "Eager to learn and adapt with a proactive approach",
+    "Effective problem-solving and logical thinking for complex issues",
     "Basic English communication and technical reading",
+    "Mastery of Git for seamless team version control",
+    "Familiar with DevOps practices (CI/CD pipelines)",
+    "Strong attention to code quality and best practices (e.g., clean code)",
+    "Experienced with database design and optimization (SQL/NoSQL)",
   ];
 
   const techStack = [
@@ -104,13 +108,19 @@ export default function AboutSection() {
       {/* Introduction */}
       <motion.div variants={itemVariants} className="mb-12">
         <p className="text-lg text-[#F0F0F0] leading-relaxed text-justify">
-          As a 3rd-year Information Systems student, I am pursuing frontend
-          development with a focus on building applications using ReactJS and
-          NextJS. I am currently seeking a web development internship where I
-          can deepen my expertise and gain practical experience. I also hope to
-          contribute and bring value to the company, while taking this as a
-          great opportunity to learn valuable knowledge and experience from
-          experienced seniors.
+          As a dedicated 3rd-year Information Systems student, I am passionately
+          pursuing a career as a Fullstack TypeScript Developer, with a strong
+          foundation in frontend development using ReactJS and NextJS. My
+          journey involves crafting dynamic, user-centric applications while
+          expanding my expertise into backend technologies. Currently, I’m
+          focused on mastering Next.js, Node.js, and Microservices Architecture,
+          eagerly exploring their ecosystems and applying them to real-world
+          projects to sharpen my web development skills. I am actively seeking a
+          web development internship where I can deepen my practical knowledge,
+          collaborate with experienced professionals, and deliver value to the
+          company. This opportunity will allow me to learn from seasoned
+          mentors, grow my skill set, and contribute meaningfully to innovative
+          projects.
         </p>
       </motion.div>
 
